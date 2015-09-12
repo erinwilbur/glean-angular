@@ -26,3 +26,23 @@ if (Codes.find().count() === 0) {
     url: 'http://www.lhup.edu/'
   });
 }*/
+if (Nodes.find().count() === 0) {
+  Nodes.insert({
+    name: "Base",
+    description: "Your first node!",
+    tags: ["basic"],
+    image: "",
+    content: "",
+    children: [],
+    parents: []
+  });
+}
+
+if (Units.find().count() === 0) {
+  Units.insert({
+    name: "Base",
+    description: "Your first Unit!",
+    nodes: [],
+    tags: []
+  });
+}
