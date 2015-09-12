@@ -1,0 +1,20 @@
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3>
+        <a href="{{url}}">{{title}}</a>
+        <span>{{domain}}</span>
+      </h3>
+      <p>
+      <h3>{{price}}</h3>
+      <h2>{{description}}</h2>
+      <h2>(submitted by: <a href="{{pathFor 'wishlist' email='' }}/{{author}}">{{author}}</a>)</h2>
+      {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a> {{/if}}
+      {{#if unclaimed}}
+      {{else}}{{#if anonymous}}<h2>(claimed by: anonymous</h2>{{else}}<h2>(claimed by: {{claimedBy}})</h2>{{/if}}
+      {{/if}}
+      </p>
+    </div>
+      {{#if unclaimed}}<a href="{{pathFor 'claimItem'}}" class="discuss btn btn-default">Claim It</a> {{/if}}
+  </div>
+</template>

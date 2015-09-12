@@ -1,0 +1,40 @@
+<template name="postSubmit">
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="url">Link</label>
+      <div class="controls">
+        <input name="url" id="url" type="text" value="" placeholder="Where can I buy it?" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="title">Item Name</label>
+      <div class="controls">
+        <input name="title" id="title" type="text" value="" placeholder="What is this thing?" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="price">Price</label>
+      <div class="controls">
+        <input name="price" id="price" type="text" value="$0.00" placeholder="$0.00" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+        <input name="description" id="description" type="text" value="" placeholder="Tell us about the item." class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="access">Access</label>
+      <div class="controls">
+        <input name="access" id="access" type="text" value="" placeholder="Who would you like to share this with?(You may add as many email addresses as you like)" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Add it!" class="btn btn-primary"/>
+  </form>
+  <div class="posts">
+    {{#each posts}}
+      {{> postItem}}
+    {{/each}}
+  </div>
+</template>
