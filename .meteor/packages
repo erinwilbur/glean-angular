@@ -6,8 +6,17 @@
 
 meteor-platform
 autopublish
-insecure
 fourseven:scss
 reywood:bootstrap3-sass
 iron:router
 accounts-ui
+twbs:bootstrap
+underscore
+ian:accounts-ui-bootstrap-3
+audit-argument-checks
+reactive-var
+accounts-password
+email
+kevohagan:sweetalert
+http
+sacha:spin
