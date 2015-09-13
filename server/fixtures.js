@@ -25,7 +25,7 @@ if (Codes.find().count() === 0) {
     title: 'The LHU Book',
     url: 'http://www.lhup.edu/'
   });
-}*/
+}
 if (Nodes.find().count() === 0) {
   Nodes.insert({
     name: "Base",
@@ -45,4 +45,4 @@ if (Units.find().count() === 0) {
     nodes: [],
     tags: []
   });
-}
+}*/
