@@ -17,10 +17,18 @@ Template.userProfile.events({
 
       Router.go('postPage', {_id: result._id});
     });
+    
   }
 });
+
 Template.userProfile.helpers({
   posts: function (){
     return Posts.find({"author": Meteor.user().emails[0].address},{sort : {submitted: -1}});
+  },
+  nodes: function (){
+    return Nodes.find({"author": Meteor.user().emails[0].address},{sort : {submitted: -1}});
+  },
+  units: function (){
+    return Units.find({"author": Meteor.user().emails[0].address},{sort : {submitted: -1}});
   }
 });
