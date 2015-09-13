@@ -1,7 +1,4 @@
-#main {
-	min-height: 600px;
-}
-
-.main-search {
-	margin: 0 auto;
-}
+@import "client/stylesheets/variable.scss";
+@import "client/stylesheets/forms.scss";
+@import "client/stylesheets/typography.scss";
+@import "client/stylesheets/layout.scss";

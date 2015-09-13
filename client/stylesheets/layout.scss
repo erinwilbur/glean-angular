@@ -1,0 +1,17 @@
+#main {
+	max-height: 400px;
+	background-image: url('/images/desk1.jpeg');
+	background-size: cover;
+}
+
+.main-search {
+	margin: 0 auto;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
