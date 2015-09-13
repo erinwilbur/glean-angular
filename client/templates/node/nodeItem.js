@@ -8,6 +8,9 @@ Template.nodeItem.helpers({
   unclaimed: function() {
     return this.unclaimStatus;
   },
+  unfinished: function() {
+    return this.unfinishStatus;
+  },
   domain: function() {
     var a = document.createElement('a');
     a.href = this.url;
