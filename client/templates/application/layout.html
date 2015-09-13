@@ -1,11 +1,17 @@
 <template name="layout">
-  <div class="container">
+  <div class="container" id="home">
      {{> header}}
-     <div id="main" class="row-fluid">
+     <div id="main" class="row">
        {{#if currentUser}}  
          {{> yield}}
        {{else}}
-         <p>Please sign in to use the site</p>
+       <div class="col-md-6 col-md-offset-3">
+         <h1>Learn or Teach anything</h1>
+         <form class="form-inline">
+           <input type="text" name="search" placeholder="What would you like to learn?" class="home-search input-lg" />
+           <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+         </form>
+       </div>
        {{/if}}
      </div>
      {{> footer}}
