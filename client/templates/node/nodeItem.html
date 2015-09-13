@@ -1,0 +1,19 @@
+<template name="nodeItem">
+  <div class="post">
+    <div class="post-content">
+      <h3>
+        <a href="{{url}}">{{name}}</a>
+        <span>{{description}}</span>
+      </h3>
+      <p>
+      <h3>{{tags}}</h3>
+      <h2>{{content}}</h2>
+      {{#if ownNode}}<a href="{{pathFor 'nodeEdit'}}">Edit</a> {{/if}}
+      {{#if unclaimed}}
+        {{else}}{{#if anonymous}}<h2>(claimed by: anonymous</h2>{{else}}<h2>(claimed by: {{claimedBy}})</h2>{{/if}}
+      {{/if}}
+      </p>
+    </div>
+      {{#if unfinished}}<a href="{{pathFor 'completeNode'}}" class="discuss btn btn-default">Finished It!</a> {{/if}}
+  </div>
+</template>
