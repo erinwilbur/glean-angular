@@ -5,13 +5,15 @@
        {{#if currentUser}}  
          {{> yield}}
        {{else}}
-       <form class="center-block text-center">
-          <div class="form-group">
-            <h1>Learn or Teach anything</h1>
-              <input type="text" name="search" placeholder="What topic are you interested in?" class="home-search input-lg" />
-              <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+       <div class="text-center col-sm-8 center-block">
+          <h1>Learn or Teach anything</h1>
+          <div class="input-group">
+            <input id="search" type="textbox" placeholder="Search for a topic" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="searchButton">Go!</button>
+            </span>
           </div>
-        </form>
+        </div>
        {{/if}}
      </div>
      {{> footer}}

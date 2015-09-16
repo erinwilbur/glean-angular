@@ -2,3 +2,11 @@
 @import "client/stylesheets/forms.scss";
 @import "client/stylesheets/typography.scss";
 @import "client/stylesheets/layout.scss";
+
+.form-control {
+	height: 40px !important;
+}
+.btn {
+	height: 40px !important;
+	margin-top: 0 !important;
+}
