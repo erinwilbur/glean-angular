@@ -5,10 +5,16 @@
 
 .form-control {
 	height: 40px !important;
+	background: rgba(255,255,255,0.8) !important;
+	border-color: rgba(255,255,255,0.8) !important;
+	font-size: 18px !important;
 }
 .btn {
 	height: 40px !important;
 	margin-top: 0 !important;
 	background-color: $base-color !important;
 	color: $gray-darkest;
+}
+.btn-default {
+	border-color: $base-color !important;
 }
