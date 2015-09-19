@@ -1,20 +1,22 @@
 <template name="layout">
-  <div class="container-fluid" id="home">
+  <div id="home">
      {{> header}}
-     <div id="main" class="row vertical-center">
-       {{#if currentUser}}  
-         {{> yield}}
-       {{else}}
-       <div class="text-center col-sm-8 center-block">
-          <h1>Learn or Teach anything</h1>
-          <div class="input-group">
-            <input id="search" type="textbox" placeholder="Search for a topic" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" id="searchButton">Go!</button>
-            </span>
+     <div class="container-fluid">
+       <div id="main" class="row vertical-center">
+         {{#if currentUser}}  
+           {{> yield}}
+         {{else}}
+         <div class="text-center col-sm-8 center-block">
+            <h1>Learn or Teach anything</h1>
+            <div class="input-group">
+              <input id="search" type="textbox" placeholder="Search for a topic" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="searchButton">Go!</button>
+              </span>
+            </div>
           </div>
-        </div>
-       {{/if}}
+         {{/if}}
+       </div>
      </div>
      {{> footer}}
   </div>
