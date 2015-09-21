@@ -2,6 +2,18 @@ Template.layout.helpers({
   pageTitle: function() {return Session.get('pageTitle');}
 });
 
+Template.layout.events({
+  'submit .btn-default': function(event) {
+    event.preventDefault();
+    console.log("happen");
+
+    var topic = event.target.text.value;
+
+    Meteor.call("checkTopic", text);
+
+  }
+});
+
 Template.layout.created = function() {
   if (Accounts._verifyEmailToken) {
     Accounts.verifyEmail(Accounts._verifyEmailToken, function(err) {
@@ -15,3 +27,15 @@ Template.layout.created = function() {
     });
   }
 };
+
+Meteor.methods({
+  checkTopic: function(text) {
+    /* TODO check to see if topic exists, if it does
+        return a list of topics, if it does NOT return
+        prompt to create a unit */
+
+    Router.route('/unit', function () {
+      this.layout('unitCreate');
+    });
+  }
+});
